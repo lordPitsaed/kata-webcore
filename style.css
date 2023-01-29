@@ -237,4 +237,9 @@ html{
        letter-spacing: -0.2px;
        color: #1B1C21
    }
+   .content__image {
+       width: 531px;
+       height: 307px;
+       margin-bottom: 24px;
+   }
 }
