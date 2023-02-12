@@ -6,6 +6,11 @@ html{
     min-width: 320px;
 }
 
+body{
+    margin-left: 320px;
+    width: calc(100% - 320px);
+}
+
 .button--no-appereance{
     appearance: none;
     -moz-appearance: none;
@@ -18,9 +23,9 @@ html{
 
 .header {
     display: flex;
-    width: 100%;
+    width: auto;
     height: 88px;
-    min-width: 320px;
+    /* min-width: 320px; */
     background: #ffff;
     justify-content: space-evenly;
     padding: 19px 0;
@@ -36,7 +41,6 @@ html{
 
 
 .main_section{
-    width: 100%;
     padding-top: 24px;
     background-color: #F8F8F8;
     min-width: 320px;
@@ -151,7 +155,6 @@ html{
     margin-right: 8px;
 }
 
-
 @media screen and (min-width:320px) {
     
 
@@ -196,7 +199,7 @@ html{
     }
 
     .content__text {
-        max-width: 312px;
+        /* max-width: 312px; */
         height: 160px;
         letter-spacing: 0.2px;
     }
@@ -208,7 +211,7 @@ html{
     }
 
     .header__image {
-        margin-right: 250px;
+        margin-right: 5%;
     }
 
 }
@@ -243,3 +246,106 @@ html{
        margin-bottom: 24px;
    }
 }
+
+
+
+
+
+
+
+
+
+
+/* ASIDE STYLES */
+
+aside {
+    width: 320px;
+    height: 100%;
+    box-shadow: 16px 0px 52px 0 rgba(14, 24, 80, .2);
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aside__header{
+    display: flex;
+    justify-content: space-between;
+    padding:23px 24px;
+    align-items: center;
+}
+
+.aside__header__logo{
+    margin-right: 70px
+}
+
+.aside__navigation{
+    margin-top: 40px;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-between;
+}
+
+.aside__navigation__link{
+    text-decoration: none;
+    color: black;
+    font-family: "TT Lakes", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 24px;
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 24px;
+}
+
+.aside-navigation__link--active{
+    background: url(images/aside/highlight.svg) no-repeat 0px 0px;
+    color: #7E7E82;
+}
+
+.aside__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.aside__buttons-wrapper{
+    display: flex;
+    width: 152px;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.aside__footer__link{
+    font-family: "TT Lakes", sans-serif;
+        font-weight: 500;
+        text-decoration: none;
+        color: black;
+}
+
+.aside__footer__mail-link{
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 12px;
+}
+
+.aside__footer__phone-link{
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+.lang-switcher__button{
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+.lang-switcher__button--active{color: #7e7e82;}
