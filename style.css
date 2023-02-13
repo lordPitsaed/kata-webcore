@@ -4,11 +4,14 @@ body{margin:0;}
 html{
     font-size: 14px;
     min-width: 320px;
+
 }
 
 body{
     margin-left: 320px;
     width: calc(100% - 320px);
+    /* min-height: 100vh; */
+    background-color: #F8F8F8;
 }
 
 .button--no-appereance{
@@ -34,6 +37,7 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 820px;
 }
 
 .aside__header {
@@ -141,9 +145,7 @@ aside {
 
 .main_section{
     padding-top: 24px;
-    background-color: #F8F8F8;
     min-width: 320px;
-    height: 100vh;
 }
 
 .main_section__header{
@@ -197,7 +199,7 @@ aside {
     }
 
 .content{
-    height: 322px;
+    min-height: 322px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
