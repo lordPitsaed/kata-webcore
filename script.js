@@ -40,17 +40,13 @@ function swiperDisable() {
         },
     })
 
-    console.log(window.innerWidth)
-
     if (window.innerWidth <= 425) {
-        console.log('enabling swiper')
         swiperMainElem.classList.add('swiper')
         brandCards.forEach(element => {
             element.classList.add('swiper-slide');
         });
         brandWrapper.classList.add('swiper-wrapper');
     } else {
-        console.log('deleting swiper')
         swiperMainElem.classList.remove('swiper');
         brandCards.forEach(element => {
             element.classList.remove('swiper-slide');
@@ -63,5 +59,4 @@ swiperDisable();
 
 window.addEventListener('resize', () => {
     swiperDisable();
-    console.log('resize ')
 })
