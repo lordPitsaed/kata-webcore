@@ -32,7 +32,7 @@ function swiperDisable() {
     let swiper = new Swiper(".swiper", {
         direction: "horizontal",
         slidesPerView: "auto",
-        centeredSlides: true,
+        centeredSlides: false,
         spaceBetween: 0,
         pagination: {
             el: ".swiper-pagination",

@@ -354,7 +354,7 @@ body{
 @media screen and (max-width: 425px) {
 
     .swiper-wrapper{
-        left: -84px
+        /* left: -84px */
     }
 
     .brand_card{
