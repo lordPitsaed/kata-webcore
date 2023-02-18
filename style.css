@@ -1,4 +1,12 @@
 @import url(fonts/stylesheet.css);
+
+:root {
+    --swiper-pagination-color: #B5B6BC;
+    --swiper-pagination-bullet-inactive-color: #ddd;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-theme-color: #000
+}
+
 body{margin:0;}
 
 html{
@@ -8,8 +16,7 @@ html{
 }
 
 body{
-    margin-left: 320px;
-    width: calc(100% - 320px);
+
     /* min-height: 100vh; */
     background-color: #F8F8F8;
 }
@@ -34,12 +41,12 @@ body{
 
 /* ASIDE STYLES */
 
-aside {
+.aside_menu {
     width: 320px;
     height: 100%;
     box-shadow: 16px 0px 52px 0 rgba(14, 24, 80, .2);
     position: fixed;
-    left: 0;
+    left: -320px;
     top: 0;
     background-color: white;
     display: flex;
@@ -47,6 +54,8 @@ aside {
     justify-content: space-between;
     /* min-height: 820px; */
     overflow: auto;
+    opacity: 0;
+    transition: all .5s ease;
 }
 
 .aside__header {
@@ -130,7 +139,83 @@ aside {
     color: #7e7e82;
 }
 
+.aside_menu--show{
+    opacity: 1;
+    left: 0;
+}
+
 /* ASIDE END */
+
+/* BRAND STYLES */
+
+.brand_card{
+    height: 72px;
+    width: 240px;
+    background-color: #ffff;
+    margin-left: 32px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 16px 0 16px;
+    box-sizing: border-box;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+}
+
+.brand_card__logo{
+    align-self: center;
+}
+
+.brands__header{
+    display: block;
+    height: 56px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 16px 0 16px 32px;
+    text-transform:uppercase;
+    font-family: "TT Lakes", sans-serif;
+    letter-spacing: -0.2px;
+    background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    margin-bottom: 24px;
+}
+
+.brands__wrapper__button {
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 500;
+    font-size: 1.14rem;
+    height: 24px;
+    letter-spacing: -0.2px;
+    display: flex;
+    align-items: center;
+    margin-left: 32px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.brands__wrapper__button::before {
+    display: inline-block;
+    content: '';
+    background-image: url(images/main/section/read_more_icon.svg);
+    height: 24px;
+    width: 24px;
+    margin-right: 8px;
+    transition: all .3s ease;
+}
+
+.brands__wrapper__button--show-less::before {
+    display: inline-block;
+    content: '';
+    background-image: url(images/main/section/read_more_icon.svg);
+    height: 24px;
+    width: 24px;
+    margin-right: 8px;
+    transform: rotate(180deg);
+}
+
+
+/* BRAND END */
 
 .header {
     display: flex;
@@ -265,6 +350,32 @@ aside {
 }
 
 
+@media screen and (max-width: 425px) {
+
+    .swiper-wrapper{
+        left: -40px
+    }
+
+    .brand_card{
+        margin-left: 16px;
+    }
+
+    .swiper::before{
+        z-index: 1000;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        content:"";
+        display: inline-block;
+        width: 24px;
+        height: 81px;
+        background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    }
+
+    .swiper-pagination {
+        display: block;
+    }
+}
 
 @media screen and (min-width:320px) {
     
@@ -299,6 +410,36 @@ aside {
         display: none;
     }
 
+    .swiper-slide{
+        width: 240px;
+        height: 72px;
+    }
+
+    .swiper{
+        width: 100%;
+        height: 200px;
+    }
+
+}
+
+@media screen and (min-width: 426px) {
+
+        .brands__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            max-height: 172px;
+            transition: max-height .2s ease;
+            margin: auto;
+            max-width: 1120px;
+        }
+    
+        .brands__wrapper--show_more {
+            max-height: 1000px;
+            margin-bottom: 16px;
+            transition: max-height .2s ease;
+        }
+    
 }
 
 @media screen and (min-width:767px) {
@@ -324,7 +465,31 @@ aside {
     .header__image {
         margin-right: 5%;
     }
+    
+    .brand_card{
+        margin-left: 24px;
+        width: 224px;
+    }
 
+    .swiper-pagination {
+        display: none;
+    }
+
+    .brands__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        max-height: 172px;
+        transition: max-height .2s ease;
+        margin: auto;
+        max-width: 1120px;
+    }
+
+    .brands__wrapper--show_more {
+        max-height: 1000px;
+        margin-bottom: 16px;
+        transition: max-height .2s ease;
+    }
 }
 
 @media screen and (min-width:1120px){
@@ -356,6 +521,18 @@ aside {
        height: 307px;
        margin-bottom: 24px;
    }
+
+   body{
+        margin-left: 320px;
+        width: calc(100% - 320px);
+   }
+
+   .aside_menu{
+        opacity: 1;
+        left: 0;
+   }
+
+   .button-close-aside{display: none;}
 }
 
 

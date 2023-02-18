@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
-        <button class="header__button button--no-appereance">
+        <button class="header__button button--no-appereance button_open_menu">
             <img  src="images/header/button_burger.svg" alt="Меню" class="button__icon">
         </button>
         <div class="header__divider--tablet"></div>
@@ -31,7 +32,7 @@
         </button>
     </header>
 
-    <aside>
+    <aside class="aside_menu">
         <section class="aside__header">
             <button class="aside__header__button button-close-aside button--no-appereance button--hover"><img src="images/aside/button_close.svg" alt="Закрыть" class="button__icon"></button>
             <div class="aside__header__logo button--hover"><img src="images/aside/logo.svg" alt="CPS логотип" class="header__image"></div>
@@ -102,6 +103,93 @@
             </div>
             <img class="content__image" src="images/main/section/cps_picture.png" alt="Фото логотипа CPS">
     </section>
+    <section class="brands swiper">
+        <p class="brands__header">Ремонт техники различных брендов</p>
+        <div class="brands__wrapper swiper-wrapper">
+            <div class="brand_card swiper-slide">
+                <img src="images/brands/acer_logo.png"" alt="Acer Logo" class="brand_card__logo">
+                <button class="brand_card__button button--hover button--no-appereance">
+                    <img src="images/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+                </button>
+            </div>
+
+            <div class="brand_card swiper-slide">
+                <img src="images/brands/apple_logo.png"" alt=" Apple Logo" class="brand_card__logo">
+                <button class="brand_card__button button--hover button--no-appereance">
+                    <img src="images/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+                </button>
+            </div>
+
+            <div class="brand_card swiper-slide">
+                <img src="images/brands/bosch_logo.png"" alt=" Bosch Logo" class="brand_card__logo">
+                <button class="brand_card__button button--hover button--no-appereance">
+                    <img src="images/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+                </button>
+            </div>
+
+            <div class="brand_card swiper-slide">
+                <img src="images/brands/hp_logo.png"" alt=" HP Logo" class="brand_card__logo">
+                <button class="brand_card__button button--hover button--no-appereance">
+                    <img src="images/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+                </button>
+            </div>
+
+            <div class="brand_card swiper-slide">
+                <img src="images/brands/lenovo_logo.png"" alt="Lenovo Logo" class="brand_card__logo">
+                <button class="brand_card__button button--hover button--no-appereance">
+                    <img src="images/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+                </button>
+            </div>
+
+            <div class="brand_card swiper-slide">
+                <img src="images/brands/samsung_logo.png"" alt="Samsung Logo" class="brand_card__logo">
+                <button class="brand_card__button button--hover button--no-appereance">
+                    <img src="images/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+                </button>
+            </div>
+
+            <div class="brand_card swiper-slide">
+                <img src="images/brands/sony_logo.png"" alt="Sony Logo" class="brand_card__logo">
+                <button class="brand_card__button button--hover button--no-appereance">
+                    <img src="images/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+                </button>
+            </div>
+
+            <div class="brand_card swiper-slide ">
+                <img src="images/brands/viewsonic_logo.png"" alt="ViewSonic Logo" class="brand_card__logo">
+                <button class="brand_card__button button--hover button--no-appereance">
+                    <img src="images/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+                </button>
+            </div>
+
+            <div class="brand_card swiper-slide">
+                <img src="images/brands/acer_logo.png"" alt=" Acer Logo" class="brand_card__logo">
+                <button class="brand_card__button button--hover button--no-appereance">
+                    <img src="images/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+                </button>
+            </div>
+
+            <div class="brand_card swiper-slide">
+                <img src="images/brands/acer_logo.png"" alt=" Acer Logo" class="brand_card__logo">
+                <button class="brand_card__button button--hover button--no-appereance">
+                    <img src="images/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+                </button>
+            </div>
+
+            <div class="brand_card swiper-slide">
+                <img src="images/brands/acer_logo.png"" alt=" Acer Logo" class="brand_card__logo">
+                <button class="brand_card__button button--hover button--no-appereance">
+                    <img src="images/brands/brand_card__button.svg" alt="Перейти к бренду" class="brand_card__button__icon">
+                </button>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <button class="brands__wrapper__button button--no-appereance button--hover">
+            Показать всё
+        </button>
+    </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
